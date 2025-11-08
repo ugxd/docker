@@ -13,15 +13,9 @@ def home():
 
 @app.route('/test')
 def test():
-    # This uses an external library to prove dependencies work
+    # prove ts works
     response = requests.get('https://api.github.com')
     return f"da github api status is {response.status_code}"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
-```
-
-**requirements.txt**:
-```
-flask==3.0.0
-requests==2.31.0
